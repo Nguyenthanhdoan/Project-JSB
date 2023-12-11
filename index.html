@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="color">
+    <div class="album">
+        <div id="bar" class="bar">
+            <div id="item1" class="bc">
+                <div>
+                    <label  for="bgcolor">Background Color</label>
+                    <input type="color" id="bgcolor" name="bgcolor" value="#ff0000">
+                </div>
+                <input type="submit" class="sub" onclick="bc()">
+            </div>
+            <div id="arrow" class="arow" onclick="row()"><<</div>
+        </div>
+        <div class="album-cover">
+            <div class="cover">
+                <img id="uploadPreview" onclick="titleimg()"/>
+                <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" />
+                <h2 id="h2" onclick="func()">Album Title</h2>
+            </div>
+            <div class="fake">
+                <img id="uploadPreview" onclick="titleimg()"/>
+                <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" />
+                <h2 id="h2" onclick="func()">Album Title</h2>
+            </div>
+            
+        </div>
+        <div class="img-wish">
+            <div class="iw1">
+                <img id="img1" onclick="img()"/>
+                <input id="up1" type="file" name="myPhoto1" onchange="PreviewImage1();" />
+                <h3 id="h1" onclick="func1()">Add a very brief wish</h3>
+                
+            </div>
+            <div class="iw2">
+                <img id="img2" onclick="img2()"/>
+                <input id="up2" type="file" name="myPhoto2" onchange="PreviewImage2();" />
+                <h3 id="h21" onclick="func2()">Add a very brief wish</h3>
+            </div>
+            <div class="iw3">
+                <img id="img3" onclick="img3()"/>
+                <input id="up3" type="file" name="myPhoto3" onchange="PreviewImage3();" />
+                <h3 id="h3" onclick="func3()">Add a very brief wish</h3>
+            </div>
+            <div class="iw4">
+                <img id="img4" onclick="img4()"/>
+                <input id="up4" type="file" name="myPhoto4" onchange="PreviewImage4();" />
+                <h3 id="h4" onclick="func4()">Add a very brief wish</h3>
+            </div>
+            <div class="iw5">
+                <img id="img5" onclick="img5()"/>
+                <input id="up5" type="file" name="myPhoto5" onchange="PreviewImage5();" />
+                <h3 id="h5" onclick="func5()">Add a very brief wish</h3>
+            </div>
+        </div>
+        <div id="bg-img">
+            <img id="img6" onclick="img6()"/>
+            <input id="up6" type="file" name="myPhoto5" onchange="PreviewImage6();" />
+            <h3 id="h6" onclick="func6()">Add a Summary Wish</h3>
+        </div>
+        
+        <div id="br"></div>
+        
+        <img id="bruh" src="./Screenshot 2023-09-26 203410.png" alt="here">
+        <input type="button" value="Exit" id="br2" onclick="zout()">
+    </div>
+    <script src="./script.js" type="text/javascript"></script>
+</body>
+</html>

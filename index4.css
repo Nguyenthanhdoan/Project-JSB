@@ -1,0 +1,312 @@
+
+.album {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#open {
+    width: 600px;
+    position: absolute;
+    z-index: -1;
+    top: 90px;
+    left: 13%;
+}
+#open {
+    width: 1000px;
+}
+body {
+    background-color: bisque;
+}
+.btn {
+    position: absolute  ;
+    border: none;
+    width: 50px;
+    margin-top:260px;
+    margin-left: 210px;
+}
+.btn2 {
+    position: absolute  ;
+    border: none;
+    width: 50px;
+    margin-left: 30px;
+    margin-top: 260px;
+}
+#bt {
+    margin-left: -20px;
+    visibility: hidden;
+}
+.page {
+    position: absolute;
+    top: 540px;
+    right: 400px;
+}
+.nav {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    /* min-height: 100vh; */
+    width: 400px;
+    height: 70px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 600px;
+}
+:root 
+{
+    --clr : #222327;
+}
+
+.nav ul {
+    display: flex;
+    width: 350px;
+}
+
+.nav ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.nav ul li div{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav ul li div .icon{ 
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);    
+}
+.nav ul li:hover div .icon{
+    transform: translateY(-35px);
+} 
+.nav ul li div .text{
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(20px);
+} 
+.nav ul li:hover div .text{
+    opacity: 1;
+    transform: translateY(10px);
+} 
+
+.arrow {
+    background-color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    border-radius:100%;
+
+}
+
+#bruh {
+    position: absolute;
+    position:fixed;
+    left: 50%;
+    top:  50%;
+    transform:translate(-50%,-50%);
+    z-index: 1000;
+    visibility : hidden;
+    max-width:600px;
+    max-height: 600px;
+}
+#br {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    left: 0px;
+    height: 900px;
+    top: 0%;
+    visibility: hidden;
+}
+#br2 {
+    position: absolute;
+    top: 625px;
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    visibility: hidden;
+    left: 1150px;
+}
+
+.iw2, .iw3, .iw4, .iw5 {
+    height: 350px;
+    width: 300px;
+    background-color: whitesmoke;
+    border: solid black 3px;
+    text-align: center;
+    padding-top: 25px;
+    position: absolute;
+    top: 125px;
+    right: 275px;
+    /* rotate: -5deg; */
+    visibility: hidden;   
+}
+.iw1 {
+    height: 350px;
+    width: 300px;
+    background-color: whitesmoke;
+    border: solid black 3px;
+    text-align: center;
+    padding-top: 25px;
+    position: absolute;
+    top: 125px;
+    right: 275px;
+    /* rotate: -5deg; */
+}
+#img1, #img2, #img3, #img4, #img5 {
+    width:250px;
+    height: 250px; 
+    object-fit: cover;
+    background-color: black;
+}
+#addicon {
+    border: none;
+    font-size: 10px;
+   
+    background: none;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    
+    position: absolute;
+    top: -80px;
+    right: -20px;
+    /* rotate: -5deg; */
+    z-index: -1;
+}
+#editor div {
+    background-color: #fff;
+    padding: 10px;
+    border: 3px solid black;
+    position: absolute;
+    visibility: hidden;
+}
+#color-bg {
+    width: 200px;
+    height: 70px;
+}
+#edit {
+    width: 700px;
+    height: 500px;
+    bottom: -300px;
+    position: absolute;
+}
+#editor {
+    position: absolute;
+    margin-left: 10px;
+    top: 300px;
+}
+#exit, #exit2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #fff;
+    padding: 5px;
+    font-size: 25px;
+}
+
+#exit:hover, #exit2:hover {
+    background-color: red;
+    transition-duration: 0.3s;
+}
+.arrow {
+    background-color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    border-radius:100%;
+
+}
+
+.shrink {
+    width: 20px;
+}
+.hide {
+    visibility: hidden;
+}
+.ar {
+    transform: rotate(180deg);
+    margin-right: 365px;
+}
+
+.add {
+    visibility: visible;
+}
+.remove {
+    visibility: hidden;
+}
+
+#add {
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 800px;
+    position: absolute;
+    /* rotate: -5deg; */
+    border: none;
+    background: none;
+}
+#uploadPreview {
+    object-fit: cover;
+    background-color: black;
+    width: 250px;
+    height: 250px;
+}
+#div1 {
+    height: 300px;
+    width: 300px;
+    background-color: whitesmoke;
+    border: solid black 3px;
+    text-align: center;
+    padding-top: 25px;
+    margin-top: 130px;
+    position: absolute;
+    margin-left: 35%
+}
+#title {
+    margin-left: 37%;
+    margin-top: 37%;
+    position: absolute;
+    /* rotate: -5deg; */
+    background-color: #e43b44;
+    border: none;
+    font-size: 30px;
+}
+
+#btn3 {
+    margin-top: 260px;
+    visibility: hidden;
+    z-index: 1000;
+}
+#btn4 {
+    visibility: hidden;
+    z-index: 1000;
+}
+#btn2 {
+    visibility: hidden;
+}

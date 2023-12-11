@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đợi 1 Giây và Áp Dụng CSS</title>
+    <style>
+        .my-css-class {
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="element">Phần tử cần áp dụng CSS</div>
+
+    <script>
+        // Chờ 1 giây
+        setTimeout(function() {
+            // Chọn phần tử cần áp dụng CSS
+            var element = document.getElementById("element");
+
+            // Thêm class CSS vào phần tử
+            element.innerText= 'Noob';
+        }, 1000); // 1000 mili giây = 1 giây
+    </script>
+</body>
+</html>

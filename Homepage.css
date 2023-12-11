@@ -1,0 +1,253 @@
+.nav {
+    display: flex;
+    box-shadow: 1px 1px #888888;
+    height: 72px;
+    width: 1260px;
+    font-size: 24px;
+    padding: 0px 32px 0px 16px;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0 ;
+    position: fixed;
+    z-index: 100;
+}
+
+.nav div {
+    padding-left: 100px;
+}
+
+.nav .note {
+    padding-left: 475px;
+    font-size: 24px;
+}
+
+.nav .settings {
+    padding-left: 10px;
+    font-size: 24px;
+}
+.nav .fa-solid ::before {
+    background-color: rgb(180, 180, 180);
+    width: 50px;
+    height: 50px;
+}
+
+.uname {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-top: 0;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    display: none;
+    
+}
+.usname {
+    background-color: black;
+    border-radius: 25px;
+    color: whitesmoke;
+    margin-top: 0;  
+    max-width: 300px;
+    width: 70px;
+}
+
+.uparr {
+    font-size: 24px;
+}
+
+.content {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+.nav .bar {
+    padding-left: 10px;
+}
+
+#menu {
+    margin-left: 1%;
+    width: 1240px;
+    height: 500px;
+    background:linear-gradient(to right, #ff105f, #ffad06) ;
+    border-radius: 25px;
+    color: white;
+    font-size: 24px;
+    z-index: -1;
+    margin-top: 10px;
+    box-shadow: 2px 2px 2px 2px #888888;
+    margin-top: 90px;
+}
+
+#spark, #templ {
+    z-index: 5;
+    
+    position: absolute;
+    font-size: 32px;
+}
+
+#spark {
+    left: 21.5%;
+    top: 77%;
+}
+#templ {
+    top: 77.6%;
+    font-size: 24px;
+    left: 70%;
+    
+}
+#circle, #circle2 {
+    width: 55px;
+    height: 55px;
+    background-color: whitesmoke;
+    position: absolute;
+    border-radius: 100%;
+
+}
+#circle {
+    left: 20.5%;
+    top: 75.5%;
+}
+
+#circle2 {
+    top: 75.5%;
+    left: 68.57%;
+}
+.bg {
+    width: 1240px;
+    height: 300px;
+    background-color: whitesmoke;
+    margin-left: 1%;
+    border-radius: 25px;
+    margin-top: 5px;
+    box-shadow: 1px 1px 8px #888888;
+}
+.bf{display: flex;}
+.arr {
+    background-color: whitesmoke;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    rotate: 45deg;
+    left: 21.5%;
+    top: 84.5%;
+    /* box-shadow: 1px 1px 8px #888888; */
+    transition: 0.3s;
+}
+
+.text {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    font-size: 24px;
+}
+.img {
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    border: 2px solid black;
+    margin: 10px;
+    z-index: 100;
+    background-color: bisque;
+}   
+.ad {
+    position: absolute;
+    border-radius: 25px;
+    top: 15%;
+    left: 10%;
+    width: 200px;
+    height: 400px;
+}
+.ad img {
+    border-radius:25px ;
+    width:1000px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.footer {
+    height: 250px;
+    margin-top: 100px;
+}
+
+.footer .header {
+    text-align: center;
+    padding: 20px;
+    font-size: 48px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer .logo {
+    /* padding-top: 5px; */
+    font-size: 36px;
+    text-align: center;
+    position: absolute;
+    left: 85%;
+    top: 1190px;
+}
+
+.footer .contact {
+    padding-left: 100px;
+}
+
+.footer .contact .contact-it {
+    padding-top: 5px;
+}
+
+.baritems {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border: 0.5px solid black;
+    width: 200px;
+    position: absolute;
+    top: 72px;
+    height: 611px;
+    position: fixed;
+    padding-left: 10px;
+    visibility: hidden;
+}
+
+
+#userface, #userface2  {
+    background-color: grey;
+    height: 60px;
+    width: 60px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 28px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.baritems .userfile div {
+    margin-top: 20px;
+}
+
+.userprof {
+    border: 1px solid black;
+    background-color: whitesmoke;
+    max-width: 200px;
+    width: 200px;
+    position: absolute;
+    top: 72.5px;right: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.userprof .userfile div {
+    padding-top: 20px;
+}
+
+.display-name, .log-out {
+    width: 198px;height: 30px;
+    padding-left: 0;
+}
+.display-name:hover, .log-out:hover {
+    background-color: #888888;
+
+}

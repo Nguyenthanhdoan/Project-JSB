@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index3.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+</head>
+<body onload="load()">
+    <div class="album">
+        <img id="open" src="./image-removebg-preview (1).png" alt="">
+        <button id="btn" class="btn"><img class="btn" src="./23.png" alt=""></button>
+        <a href="./indexx2.html" id="btn2" class="btn2"><img id="i2" class="btn2" src="./3.png" alt=""></a>
+        <button id="bt" class="btn2"><img id="i2" class="btn2" src="./3.png" alt=""></button>
+        <div class="page" id="pagenum">1</div>
+    </div>
+    <div>
+        <div id="iw1" class="iw1 iw">
+            <img id="img1" onclick="img()"/>
+            <input id="up1" type="file" name="myPhoto1" onchange="PreviewImage1();" />
+            <h3 id="h1" onclick="func1()">Add a very brief wish</h3> 
+        </div>
+        <div id="iw2" class="iw2 i">
+            <img id="img2" onclick="img2()"/>
+            <input id="up2" type="file" name="myPhoto2" onchange="PreviewImage2();" />
+            <h3 id="h2" onclick="func2()">Add a very brief wish</h3>
+        </div>
+        <div id="iw3" class="iw3 ">
+            <img id="img3" onclick="img3()"/>
+            <input id="up3" type="file" name="myPhoto3" onchange="PreviewImage3();" />
+            <h3 id="h3" onclick="func3()">Add a very brief wish</h3>
+        </div>
+        <div id="iw4" class="iw4">
+            <img id="img4" onclick="img4()"/>
+            <input id="up4" type="file" name="myPhoto4" onchange="PreviewImage4();" />
+            <h3 id="h4" onclick="func4()">Add a very brief wish</h3>
+        </div>
+        <div id="iw5" class="iw5">
+            <img id="img5" onclick="img5()"/>
+            <input id="up5" type="file" name="myPhoto5" onchange="PreviewImage5();" />
+            <h3 id="h5" onclick="func5()">Add a very brief wish</h3>
+        </div>
+    </div>
+    <div id="nav" class="nav">
+        <ul id="asd">
+            <li class="list">
+                <div class="div">
+                    <span onclick="show()" class="icon">
+                        <ion-icon name="color-fill"></ion-icon>
+                    </span>
+                    <span onclick="show()" class="text">Background Color</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="editshow()" class="icon">
+                        <ion-icon name="create"></ion-icon>
+                    </span>
+                    <span onclick="editshow()" class="text">Edit Image</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="doUndo()" class="icon">
+                        <ion-icon name="undo"></ion-icon>
+                    </span>
+                    <span onclick="doUndo()" class="text">Undo</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="doRedo()" class="icon">
+                        <ion-icon name="redo"></ion-icon>
+                    </span>
+                    <span onclick="doRedo()" class="text">Redo</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="save()" class="icon">
+                        <ion-icon name="save"></ion-icon>
+                    </span>
+                    <span onclick="save()" class="text">Save</span>
+                </div>
+            </li>
+        </ul>
+        <div id="arrow" onclick="rotate()" class="arrow"><<</div>
+    </div>
+    
+    <button id="add"><img id="addicon" src="./plus-circle1-removebg-preview.png" alt=""></button>
+    
+    <div id="editor">
+        <div id="color-bg">
+            <label  for="bgcolor">Background Color</label>
+            <input type="color" id="bgcolor" name="bgcolor" value="#ff0000">
+            <input type="submit" class="sub" onclick="bc()">
+            <input type="submit" onclick="reset()" value="Reset">
+            <ion-icon id="exit" onclick="exit()" name="close-circle-outline"></ion-icon>
+        </div>
+        <div id="edit">
+            <span id="flip" onclick="flip()">Flip</span>
+            <ion-icon id="exit2" onclick="exit2()" name="close-circle-outline"></ion-icon>
+        </div>
+        <div id="save" style="position: absolute;">
+            <div>
+                <img id="si1" src="" alt="">
+                <h3 id="sh1"></h3>
+            </div>
+            <div>
+                <img id="si2" src="" alt="">
+                <h3 id="sh2"></h3>
+            </div>
+            <div>
+                <img id="si3" src="" alt="">
+                <h3 id="sh3"></h3>
+            </div>
+            <div>
+                <img id="si4" src="" alt="">
+                <h3 id="sh4"></h3>
+            </div>
+            <div>
+                <img id="si5" src="" alt="">
+                <h3 id="sh5"></h3>
+            </div>
+        </div>
+    </div>
+    
+    <div id="br"></div>
+    <img id="bruh" src="./Screenshot 2023-09-26 203410.png" alt="here">
+    <input type="button" value="Exit" id="br2" onclick="zout()">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./templates.js"></script>
+    <script src="./script2.js"></script> 
+    <script src="./for pages.js"></script>
+    
+</body>
+</html>

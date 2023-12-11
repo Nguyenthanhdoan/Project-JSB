@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style4.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head>
+
+<body id="color">
+    <div class="album">
+        <img style="width: 800px;" id="img" src="./album 2/output-onlinegiftools.png" alt="">
+        <!-- <img id="open" src="./image-removebg-preview (1).png" alt=""> -->
+        <!-- <button id="btn" class="btn"><img class="btn" src="./23.png" alt=""></button> -->
+        <a id="btn" class="btn" href="./index4.html"><img class="btn" src="./23.png" alt=""></a>
+
+    </div>
+    <div id="div1">
+        <img id="uploadPreview" onclick="titleimg()" />
+        <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" />
+    </div>
+    <h2 id="title" onclick="func()">Album Title</h2>
+    <div id="nav" class="nav">
+        <ul id="asd">
+            <li class="list">
+                <div class="div">
+                    <span onclick="show()" class="icon">
+                        <ion-icon name="color-fill"></ion-icon>
+                    </span>
+                    <span onclick="show()" class="text">Background Color</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="editshow()" class="icon">
+                        <ion-icon name="create"></ion-icon>
+                    </span>
+                    <span onclick="editshow()" class="text">Edit Image</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="doUndo()" class="icon">
+                        <ion-icon name="undo"></ion-icon>
+                    </span>
+                    <span onclick="doUndo()" class="text">Undo</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="doRedo()" class="icon">
+                        <ion-icon name="redo"></ion-icon>
+                    </span>
+                    <span onclick="doRedo()" class="text">Redo</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span class="icon">
+                        <ion-icon name="save"></ion-icon>
+                    </span>
+                    <span class="text">Save</span>
+                </div>
+            </li>
+        </ul>
+        <div id="arrow" onclick="rotate()" class="arrow"><<</div>
+    </div>
+    <div id="editor">
+        <div id="color-bg">
+            <label  for="bgcolor">Background Color</label>
+            <input type="color" id="bgcolor" name="bgcolor" value="#ff0000">
+            <input type="submit" class="sub" onclick="bc()">
+            <input type="submit" onclick="reset()" value="Reset">
+            <ion-icon id="exit" onclick="exit()" name="close-circle-outline"></ion-icon>
+        </div>
+        <div id="edit">
+            <span id="flip" onclick="flip()">Flip</span>
+            <ion-icon id="exit2" onclick="exit2()" name="close-circle-outline"></ion-icon>
+        </div>
+    </div><div class="img-wish">
+  
+    
+    <div id="br"></div>
+    <img id="bruh" src="./Screenshot 2023-09-26 203410.png" alt="here">
+    <input type="button" value="Exit" id="br2" onclick="zout()">
+    
+    <script>
+        function titleimg() {
+    let a = document.getElementById('uploadPreview').getAttribute('src')
+    document.getElementById('bruh').src = a
+    document.getElementById('bruh').style.visibility = 'visible'
+    document.getElementById('br').style.visibility = 'visible'
+    document.getElementById('br2').style.visibility = 'visible'
+} // show an img closely
+    function zout() {
+        document.getElementById('bruh').style.visibility = 'hidden'
+        document.getElementById('br').style.visibility = 'hidden'
+        document.getElementById('br2').style.visibility = 'hidden'
+    } // contradicts the upper func
+    function bc() {
+        let bc = document.getElementById('bgcolor').value;
+        document.getElementById('color').style.backgroundColor = bc
+    } // bg-color func
+    function show() {
+        document.getElementById('color-bg').style.visibility = 'visible';
+    } // open bg-color
+    function exit() {
+        document.getElementById('color-bg').style.visibility = 'hidden';
+    } // close bg-color
+    function exit2() {
+        document.getElementById('edit').style.visibility = 'hidden';
+    } //close edit
+    function reset() {
+        document.getElementById('color').style.backgroundColor = 'bisque'
+    } //reset bg-color
+    function rotate() {
+    document.getElementById('nav').classList.toggle('shrink');
+    document.getElementById('arrow').classList.toggle('ar');
+    document.getElementById('asd').classList.toggle('hide');
+} // shrink or enlarge nav bar
+    function PreviewImage() {
+        let img = new FileReader();
+        img.readAsDataURL(document.getElementById("uploadImage").files[0]);
+        document.getElementById('uploadImage').style.visibility = 'hidden'
+        img.onload = function (loadimg) {
+            document.getElementById("uploadPreview").src = loadimg.target.result;
+        };
+    }; //import title img from folder
+    function func() {
+        let a = prompt('Add or Change The Title For Your Album')
+        document.getElementById('h2').innerHTML = a
+    } // add title album
+    function titleimg() {
+    let a = document.getElementById('uploadPreview').getAttribute('src')
+    document.getElementById('bruh').src = a
+    document.getElementById('bruh').style.visibility = 'visible'
+    document.getElementById('br').style.visibility = 'visible'
+    document.getElementById('br2').style.visibility = 'visible'
+    } // show an img closely
+
+    
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- <script src="./for pages.js"></script> -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/4c84863d74.js">
+    <script src="./templates.js"></script>
+</body>
+
+</html>
+
+<img src="./album 2/output-onlinegiftools2.png" alt="">

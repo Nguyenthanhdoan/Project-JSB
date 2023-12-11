@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index4.css">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+</head>
+<body onload="load()">
+    <div class="album">
+        <img style="width: 900px;" id="open" src="./album 2/output-onlinegiftools.png" alt="" onclick="myLoop()">
+        <button id="btn" class="btn"><img class="btn" src="./23.png" alt=""></button>
+        <button id="btn2" class="btn2"><img id="i2" class="btn2" src="./3.png" alt=""></button>
+        <button id="btn3" class="btn"><img class="btn" src="./23.png" alt="" ></button>
+        <button id="btn4" class="btn2"><img id="i3" class="btn2" src="./3.png" alt="" ></button>
+        <div class="page" id="pagenum">1</div>
+        <div id="div1">
+            <img id="uploadPreview" onclick="titleimg()" />
+            <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" />
+        </div>
+        <h2 id="title" onclick="func()">Album Title</h2>
+    </div>
+    <div>
+        <div id="iw1" class="iw1 iw" style="visibility: hidden;">
+            <img id="img1" onclick="img()"/>
+            <input id="up1" type="file" name="myPhoto1" onchange="PreviewImage1();" />
+            <h3 id="h1" onclick="func1()">Add a very brief wish</h3> 
+        </div>
+        <div id="iw2" class="iw2 i">
+            <img id="img2" onclick="img2()"/>
+            <input id="up2" type="file" name="myPhoto2" onchange="PreviewImage2();" />
+            <h3 id="h2" onclick="func2()">Add a very brief wish</h3>
+        </div>
+        <div id="iw3" class="iw3 ">
+            <img id="img3" onclick="img3()"/>
+            <input id="up3" type="file" name="myPhoto3" onchange="PreviewImage3();" />
+            <h3 id="h3" onclick="func3()">Add a very brief wish</h3>
+        </div>
+        <div id="iw4" class="iw4">
+            <img id="img4" onclick="img4()"/>
+            <input id="up4" type="file" name="myPhoto4" onchange="PreviewImage4();" />
+            <h3 id="h4" onclick="func4()">Add a very brief wish</h3>
+        </div>
+        <div id="iw5" class="iw5">
+            <img id="img5" onclick="img5()"/>
+            <input id="up5" type="file" name="myPhoto5" onchange="PreviewImage5();" />
+            <h3 id="h5" onclick="func5()">Add a very brief wish</h3>
+        </div>
+    </div>
+    <div id="nav" class="nav">
+        <ul id="asd">
+            <li class="list">
+                <div class="div">
+                    <span onclick="show()" class="icon">
+                        <ion-icon name="color-fill"></ion-icon>
+                    </span>
+                    <span onclick="show()" class="text">Background Color</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="editshow()" class="icon">
+                        <ion-icon name="create"></ion-icon>
+                    </span>
+                    <span onclick="editshow()" class="text">Edit Image</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="doUndo()" class="icon">
+                        <ion-icon name="undo"></ion-icon>
+                    </span>
+                    <span onclick="doUndo()" class="text">Undo</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="doRedo()" class="icon">
+                        <ion-icon name="redo"></ion-icon>
+                    </span>
+                    <span onclick="doRedo()" class="text">Redo</span>
+                </div>
+            </li>
+            <li class="list">
+                <div class="div">
+                    <span onclick="save()" class="icon">
+                        <ion-icon name="save"></ion-icon>
+                    </span>
+                    <span onclick="save()" class="text">Save</span>
+                </div>
+            </li>
+        </ul>
+        <div id="arrow" onclick="rotate()" class="arrow"><<</div>
+    </div>
+    
+    <button id="add"><img id="addicon" src="./plus-circle1-removebg-preview.png" alt=""></button>
+    <a style="position: absolute; top: 20px;" href="./Homepage.html">Back</a>
+    
+    <div id="editor">
+        <div id="color-bg">
+            <label  for="bgcolor">Background Color</label>
+            <input type="color" id="bgcolor" name="bgcolor" value="#ff0000">
+            <input type="submit" class="sub" onclick="bc()">
+            <input type="submit" onclick="reset()" value="Reset">
+            <ion-icon id="exit" onclick="exit()" name="close-circle-outline"></ion-icon>
+        </div>
+        <div id="edit">
+            <span id="flip" onclick="flip()">Flip</span>
+            <ion-icon id="exit2" onclick="exit2()" name="close-circle-outline"></ion-icon>
+        </div>
+        <div id="save" style="position: absolute;">
+            <div>
+                <img id="si1" src="" alt="">
+                <h3 id="sh1"></h3>
+            </div>
+            <div>
+                <img id="si2" src="" alt="">
+                <h3 id="sh2"></h3>
+            </div>
+            <div>
+                <img id="si3" src="" alt="">
+                <h3 id="sh3"></h3>
+            </div>
+            <div>
+                <img id="si4" src="" alt="">
+                <h3 id="sh4"></h3>
+            </div>
+            <div>
+                <img id="si5" src="" alt="">
+                <h3 id="sh5"></h3>
+            </div>
+        </div>
+    </div>
+    <div id="br"></div>
+    <img id="bruh" src="./Screenshot 2023-09-26 203410.png" alt="here">
+    <input type="button" value="Exit" id="br2" onclick="zout()">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="./templates.js"></script>
+    <script src="./script2.js"></script> 
+    <!-- <script src="./for pages.js"></script> -->
+    <script>
+
+    var i =1
+    var btn = document.getElementById('btn')
+    var img = document.getElementById('open')
+    var btn2 = document.getElementById('i2');
+
+
+    function myLoop() {  
+        setTimeout(function() {  
+                if (i==1) {
+                    img.src = './album 2/output-onlinegiftools2.png'
+                } else if (i==2) {
+                    img.src = './album 2/output-onlinegiftools3.png'
+                } else if (i==3) {
+                    img.src = './album 2/output-onlinegiftools4.png'
+                } else if (i==4) {
+                    img.src = './album 2/output-onlinegiftools5.png'
+                } else if (i==5) {
+                    img.src = './album 2/output-onlinegiftools6.png'
+                } else if (i==6) {
+                    img.src = './album 2/output-onlinegiftools7.png'
+                } else if (i==7) {
+                    img.src = './album 2/output-onlinegiftools8.png'
+                } else if (i==8) {
+                    img.src = './album 2/output-onlinegiftools9.png'
+                } else if (i==9) {
+                    img.src = './album 2/output-onlinegiftools10.png'
+                } else if (i==10) {
+                    img.src = './album 2/output-onlinegiftools11.png'
+                } else if (i==11) {
+                    img.src = './album 2/output-onlinegiftools12.png'
+                } else if (i==12) {
+                    img.src = './album 2/output-onlinegiftools13.png'
+                } else if (i==13) {
+                    img.src = './album 2/output-onlinegiftools14.png'
+                } 
+        i++;                   
+        if (i <= 13) {         
+        myLoop();             
+        
+        }     else if (i>13) {
+            i = 1
+        }   
+        document.getElementById('div1').style.visibility='hidden'
+        document.getElementById('title').style.visibility='hidden'
+        document.getElementById('iw1').style.visibility='visible'
+        document.getElementById('btn').style.visibility = 'hidden'
+        document.getElementById('btn3').style.visibility = 'visible'
+        btn2.style.visibility = 'visible'
+
+    }, 50)
+     
+    }
+    btn.addEventListener('click', function() {
+        setTimeout(function() {  
+            if (i==1) {
+                img.src = './album 2/output-onlinegiftools2.png'
+            } else if (i==2) {
+                img.src = './album 2/output-onlinegiftools3.png'
+            } else if (i==3) {
+                img.src = './album 2/output-onlinegiftools4.png'
+            } else if (i==4) {
+                img.src = './album 2/output-onlinegiftools5.png'
+            } else if (i==5) {
+                img.src = './album 2/output-onlinegiftools6.png'
+            } else if (i==6) {
+                img.src = './album 2/output-onlinegiftools7.png'
+            } else if (i==7) {
+                img.src = './album 2/output-onlinegiftools8.png'
+            } 
+            i++;                   
+            if (i <= 13) {           
+            myLoop();            
+            }                       
+        }, 10)
+    })
+    var i2 = 1
+    btn2.addEventListener('click', function() {
+        setTimeout(function() {  
+            // if (i2==1) {
+            //     img.src = './album 2/output-onlinegiftools8.png'
+            // } else if (i2==2) {
+            //     img.src = './album 2/output-onlinegiftools7.png'
+            // } else if (i2==3) {
+            //     img.src = './album 2/output-onlinegiftools6.png'
+            // } else if (i2==4) {
+            //     img.src = './album 2/output-onlinegiftools5.png'
+            // } else if (i2==5) {
+            //     img.src = './album 2/output-onlinegiftools4.png'
+            // } else if (i2==6) {
+            //     img.src = './album 2/output-onlinegiftools3.png'
+            // } else if (i2==7) {
+            //     img.src = './album 2/output-onlinegiftools2.png'
+            // } 
+            i2++;                   
+            if (i2 <= 13) {        
+            myLoop2();           
+            }                      
+        }, 100)
+    })
+    function myLoop2() {
+        setTimeout(function() { 
+                if (i2==1) {
+                    img.src = './album 2/output-onlinegiftools14.png'
+                } else if (i2==2) {
+                    img.src = './album 2/output-onlinegiftools13.png'
+                } else if (i2==3) {
+                    img.src = './album 2/output-onlinegiftools12.png'
+                } else if (i2==4) {
+                    img.src = './album 2/output-onlinegiftools11.png'
+                } else if (i2==5) {
+                    img.src = './album 2/output-onlinegiftools10.png'
+                } else if (i2==6) {
+                    img.src = './album 2/output-onlinegiftools9.png'
+                } else if (i2==7) {
+                    img.src = './album 2/output-onlinegiftools8.png'
+                } else if (i2==8) {
+                    img.src = './album 2/output-onlinegiftools7.png'
+                } else if (i2==9) {
+                    img.src = './album 2/output-onlinegiftools6.png'
+                } else if (i2==10) {
+                    img.src = './album 2/output-onlinegiftools5.png'
+                } else if (i2==11) {
+                    img.src = './album 2/output-onlinegiftools4.png'
+                } else if (i2==12) {
+                    img.src = './album 2/output-onlinegiftools3.png'
+                } else if (i2==13) {
+                    img.src = './album 2/output-onlinegiftools2.png'
+                } 
+        i2++;               
+        if (i2 <= 13) {       
+        myLoop2();             
+        } else if (i2 >13) {
+            i2 =1 
+        }
+        document.getElementById('div1').style.visibility='visible'
+        document.getElementById('title').style.visibility='visible'
+        document.getElementById('iw1').style.visibility='hidden'
+        document.getElementById('btn3').style.visibility = 'hidden'
+        document.getElementById('btn').style.visibility = 'visible'
+        btn2.style.visibility = 'hidden'
+    }, 50)
+    }
+    
+    </script> <!--turning pages-->
+    <script>
+        function PreviewImage() {
+        let img = new FileReader();
+        img.readAsDataURL(document.getElementById("uploadImage").files[0]);
+        document.getElementById('uploadImage').style.visibility = 'hidden'
+        img.onload = function (loadimg) {
+            document.getElementById("uploadPreview").src = loadimg.target.result;
+        }};
+        function func() {
+        let a = prompt('Add or Change The Title For Your Album')
+        document.getElementById('h2').innerHTML = a
+    } // add title album
+    function titleimg() {
+    let a = document.getElementById('uploadPreview').getAttribute('src')
+    document.getElementById('bruh').src = a
+    document.getElementById('bruh').style.visibility = 'visible'
+    document.getElementById('br').style.visibility = 'visible'
+    document.getElementById('br2').style.visibility = 'visible'
+} // show an img closely
+    </script>
+    <script>
+        var page = 1
+var btn = document.getElementById('btn'); a = 1;
+var btn2 = document.getElementById('btn2');
+var back = document.getElementById('btn4');
+var pagenumber = document.getElementById('pagenum')
+var clnext = document.getElementById('btn3'); clback = document.getElementById('btn4')
+var counter = 0
+var add= document.getElementById('add')
+var b = -1
+var img1 = 0 ; img2 = 0 ;img3 = 0;img4 = 0
+add.classList.add('remove')
+add.addEventListener('click', function() {
+    if (b == 0) {
+        document.getElementById('iw2').style.visibility = 'visible';
+        img1 =1
+        add.style.visibility='hidden'
+    } else if (b == 1) {
+        document.getElementById('iw3').style.visibility = 'visible'
+        img2=1
+        add.style.visibility='hidden'
+    } else if ( b == 2 ) {
+        document.getElementById('iw4').style.visibility = 'visible'
+        add.style.visibility='hidden'
+        img3=1
+    } else if ( b == 3 ) {
+        document.getElementById('iw5').style.visibility = 'visible'
+        add.style.visibility='hidden'
+        img4=1
+    }
+})
+clnext.onclick = function() {
+    counter += 1
+    btn2.style.visibility =' hidden'
+    a += 1
+    pagenumber.innerText = a  
+    page += 1
+    b += 1
+    if (counter == 4) {
+        btn.style.visibility = 'hidden'
+        document.getElementById('btn3').style.visibility = 'hidden'
+    }
+
+    if (counter == 1) {
+        add.classList.replace('remove', 'add')
+        back.style.visibility = 'visible'
+
+    }   
+    
+    if (page != 1) {
+        document.getElementById('iw1').style.visibility= 'hidden'
+    } else if (page == 1) {
+        document.getElementById('iw1').style.visibility= 'visible'
+    }
+    if (page == 2 && img1==1) {
+        document.getElementById('iw2').style.visibility = 'visible'
+    } else if (page == 2 && img1==0) {
+        add.style.visibility='visible'
+    } else {
+        document.getElementById('iw2').style.visibility = 'hidden'
+    }
+    if (page == 3 && img2==1) {
+        document.getElementById('iw3').style.visibility = 'visible'
+    } else if (page == 3 && img2==0) {
+        add.style.visibility='visible'
+    } else {
+        document.getElementById('iw3').style.visibility = 'hidden'
+    }
+    if (page == 4 && img3==1) {
+        document.getElementById('iw4').style.visibility = 'visible'
+    } else if (page == 4 && img3==0) {
+        add.style.visibility='visible'
+    } else {
+        document.getElementById('iw4').style.visibility = 'hidden'
+    }
+    if (page == 5 && img4==1) {
+        document.getElementById('iw5').style.visibility = 'visible'
+    } else if (page == 5 && img4==0) {
+        add.style.visibility='visible'
+    } else {
+        document.getElementById('iw5').style.visibility = 'hidden'
+    }
+    
+}
+clback.onclick = function() {
+    counter -= 1
+    a -= 1
+    pagenumber.innerText = a
+    page -= 1
+    b -= 1
+    if (counter <= 0) {
+        btn2.style.visibility ='visible'
+        document.getElementById('iw1').style.visibility= 'visible'
+        back.style.visibility = 'hidden'
+        add.classList.replace('add', 'remove')
+      
+        document.querySelector('.i').style.visibility ='hidden'
+    }
+    if (counter <= 4 ) {
+        
+        btn.style.visibility = 'visible'
+    }
+    if (page != 1) {
+        document.getElementById('iw1').style.visibility= 'hidden'
+    } else if (page == 1) {
+        document.getElementById('iw1').style.visibility= 'visible'
+        add.style.visibility='hidden'
+    }
+    if (page == 2 && img1==1) {
+        document.getElementById('iw2').style.visibility = 'visible'
+    } else if (page == 2 && img1==0) {
+        add.style.visibility='visible'
+    } else {
+        document.getElementById('iw2').style.visibility = 'hidden'
+    }
+    if (page == 3 && img2==1) {
+        document.getElementById('iw3').style.visibility = 'visible'
+    } else if (page == 3 && img2==0) {
+        add.style.visibility='visible'
+    } else {
+        document.getElementById('iw3').style.visibility = 'hidden'
+    }
+    if (page == 4 && img3==1) {
+        document.getElementById('iw4').style.visibility = 'visible'
+    } else if (page == 4 && img3==0) {
+        add.style.visibility='visible'
+    } else {
+        document.getElementById('iw4').style.visibility = 'hidden'
+    }
+    if (page == 5 && img4==1) {
+        document.getElementById('iw5').style.visibility = 'visible'
+    } else if (page == 5 && img4==0) {
+        add.style.visibility='visible'
+    } else {
+        document.getElementById('iw5').style.visibility = 'hidden'
+    }
+}
+
+
+
+    </script>
+</body>
+</html>
+
+

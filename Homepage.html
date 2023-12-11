@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="nav">
+        <ion-icon class="bar" name="menu" id="bar"  onclick="user()"></ion-icon>
+        <div class="pack" style="color: whitesmoke;">Packs</div>
+        <div class="about">About</div>
+        <div class="create">Create</div>
+        <ion-icon id="note" class="note" name="notifications"></ion-icon>
+        <ion-icon id="settings" class="settings" name="settings"></ion-icon>
+        <div id="userholder" class="user">
+            <i  id="user" class="fa-solid fa-user"></i>
+        </div>
+    </div>
+    
+    <div id="tag" class="uname" style="position: fixed; ">
+        <ion-icon class="uparr" name="arrow-dropup"></ion-icon>
+        <div class="usname">User</div>
+    </div>
+    <div id="tag2" class="uname" style="position: fixed;">
+        <ion-icon class="uparr" name="arrow-dropup"></ion-icon>
+        <div class="usname">Settings</div>
+    </div>
+    <div id="tag3" class="uname" style="position: fixed;">
+        <ion-icon class="uparr" name="arrow-dropup"></ion-icon>
+        <div class="usname" style="width: 100px;">Notifications</div>
+    </div>
+    <div id="tag4" class="uname" style="position: fixed;z-index: 100;">
+        <ion-icon class="uparr" name="arrow-dropup"></ion-icon>
+        <div id="dislog" class="usname" style="width: 100px;">Display Name</div>
+    </div>
+    <div id="tag5" class="uname" style="position: fixed;z-index: 100;">
+        <ion-icon class="uparr" name="arrow-dropup"></ion-icon>
+        <div id="dislog" class="usname" style="width: 100px;">Log out</div>
+    </div>
+
+
+
+    <div id="menu"></div>
+    <ion-icon id="spark" name="star-half"></ion-icon>
+    <div id="circle" class="circle"></div>
+    <div class="bg">
+        <div id="text" class="text"><b>Models</b></div>
+        <div class="bf">
+            <a href="indexx2.html"><img class="img" onclick="album1()" src="./Screenshot_2023-10-17_194924-removebg-preview.png" alt=""></a>
+            <a href="index4.html"><img class="img" onclick="album2()" src="./album 2/output-onlinegiftools.gif" alt="" style="object-fit: cover;"></a>
+            <a href="indexx3.html"><img class="img" onclick="album3()" src="./album 3/d93bypu-b63cad51-3b9d-4c0b-afa-unscreen.gif" alt=""></a>
+            <a href="indexx5.html"><img onclick="album4()" src="./album 4/image-processing20200209-20775-unscreen.gif" alt="" class="img"></a>
+        </div>
+    </div>
+    <div id="arr" class="arr"></div>
+    <i id="templ" class="fa-regular fa-copy"></i>
+    <div id="circle2" class="circle"></div>
+    <div class="ad">
+        <img src="./ad/Screenshot 2023-11-12 064915.png" alt="" class="slide">
+        <img src="./ad/Screenshot 2023-11-12 064928.png" alt="" class="slide">
+        <img src="./ad/Screenshot 2023-11-12 064935.png" alt="" class="slide">
+        <img src="./ad/Screenshot 2023-11-12 064955.png" alt="" class="slide">
+    </div>
+
+    <div class="footer" style="background-color: black; color: white;"> 
+        <div class="header">CONTACT</div>
+        <div class="contact">
+            <div class="contact-it">Phone number: 0936452073</div>
+            <div class="contact-it">Email: blahblah@gmail.com</div>
+            <div class="contact-it">Address: 67, Hilton Road, London </div>
+            <div class="contact-it">Terms and Policy</div>
+        </div>
+        <div class="logo">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-pinterest"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </div>
+    </div>
+
+    <div id="forbars" class="baritems">
+        <div class="userfile" style="display: flex;">
+            <i id="userface" class="fa-solid fa-user"></i>
+            <div>Username</div>
+        </div>
+        <div class="userrank">Free user</div>
+        <a href="Homepage.html" class="homepage">Home page</a>
+        <a href="">Help</a>
+    </div>
+    <div id="userprof" class="userprof" style="display: none; position: fixed;">
+        <div class="userfile" style="display: flex;">
+            <i id="userface2" class="fa-solid fa-user"></i>
+            <div>Username</div>
+        </div>
+        <div class="display-name" id="disname">Display name</div>
+        <div class="log-out" id="log-out">Log out</div>
+    </div>
+
+
+
+
+
+    <script src="./templates.js"></script> 
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/4c84863d74.js" crossorigin="anonymous"></script>
+    <script src="https://rouninmedia.github.io/axe/axe.js"></script>
+    <script src="./hover.js"></script>
+    <script>
+        document.getElementById('disname').addEventListener('click', function() {
+            let a = prompt('Change your display name')
+            document.getElementById('disname').innerText = a
+        })
+    </script>
+    <script src="path/to/dist/feather.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>w3.slideshow(".slide", 2500);</script>
+    <!-- <script src="./homepage dropdown.js"></script> -->
+</body>
+</html>
